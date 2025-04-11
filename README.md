@@ -3,7 +3,7 @@
 This project involves cleaning and preparing an Airbnb dataset for analysis by handling missing values, removing duplicates, standardizing formats, and detecting outliers in key numerical fields such as price, minimum_nights and reviews_per_month. The goal is to ensure data accuracy, consistency, and readiness for deeper analysis or machine learning tasks. Excel was used for transformation and visual outlier detection using statistical formulas and Box & Whisker charts.
 
 ### Data Overview
-This project focuses on cleaning and preparing an Airbnb dataset for accurate analysis and modeling. The process includes handling missing data, removing duplicates, standardizing data formats, and detecting outliers using statistical methods. This documentation outlines all steps taken and serves as a reference for contributors or stakeholders reviewing the dataset cleaning phase.
+This project focuses on cleaning and preparing an Airbnb dataset for accurate analysis and modeling. The process includes handling missing data, removing duplicates, standardizing data formats, and detecting outliers using statistical methods. This documentation outlines all steps taken and serves as a reference for reviewing the dataset cleaning phase.
 
 #### Project Objective
 1.	Ensure data integrity and consistency.
@@ -42,8 +42,9 @@ The dataset used is titled Airbnb_dataset.csv, which contains 48,895 entries acr
 
 - **Step 4: Standardization**
   - Price Formatting: Removed $ and ,, converted to float.
-  - Text Fields: Trimmed whitespace and standardized case.
+  - Text Fields: Trimmed whitespace and standardized case.($=TRIM(A2)$ ($=PROPER(A2)$
   - Date Fields: Ensured consistent formatting using Excel date format tools.
+  - Dataset colum and row: (selected entire dataset - Home - Format- Autofit row height and Autofit column width)
 
 - **Step 5: Outlier Detection**
   - Method: Mean and Standard Deviation
@@ -60,12 +61,18 @@ The dataset used is titled Airbnb_dataset.csv, which contains 48,895 entries acr
     - Used Excel’s built-in Box & Whisker Chart for price, minimum_nights and reviews_per_month to visualize outliers.
     - Outliers appeared as individual points outside the whiskers.
 
+ <img width="247" alt="Min_night_outlier" src="https://github.com/user-attachments/assets/51416f5d-482d-42e6-a70b-f32342cd2e95" />
+    
+
 ##### Cleaned Dataset Output
 - Exported As Airbnb_Cleaned_Dataset xlsx
 - Added columns:
   - Price_Outlier
   - Min_nights_outlier
   - Reviews_Outlier
+ 
+<img width="171" alt="price outlier" src="https://github.com/user-attachments/assets/2daa245b-eeca-4849-a15a-d793bc290302" />
+
 
 ### Conclusion
 This project ensured that the Airbnb dataset is clean, consistent, and ready for further analysis or modeling. Outliers were systematically detected and flagged for review, and the data structure now adheres to analysis-ready standards.
