@@ -1,4 +1,14 @@
 # OIBSIP-Airbnb Dataset Cleaning and Outlier Detection Project
+## Table Of Content
+- [Description](#description)
+- [Data Overview](#data-overview)
+- [Project Objective](#project-objective)
+- [Data Source and cleaning](#data-source-and-cleaning)
+- [Tools Used](#tools-used)
+- [Step-by-Step Data Cleaning Process](#step-by-step-data-cleaning-process)
+- [Cleaned Dataset Output](#cleaned-dataset-output)
+- [Conclusion](#conclusion)
+
 ### Description
 This project involves cleaning and preparing an Airbnb dataset for analysis by handling missing values, removing duplicates, standardizing formats, and detecting outliers in key numerical fields such as price, minimum_nights and reviews_per_month. The goal is to ensure data accuracy, consistency, and readiness for deeper analysis or machine learning tasks. Excel was used for transformation and visual outlier detection using statistical formulas and Box & Whisker charts.
 
