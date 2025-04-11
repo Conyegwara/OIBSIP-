@@ -41,9 +41,9 @@ The dataset used is titled Airbnb_dataset.csv, which contains 48,895 entries acr
   - Duplicate rows were eliminated to maintain data uniqueness.
 
 - **Step 4: Standardization**
-•	Price Formatting: Removed $ and ,, converted to float.
-•	Text Fields: Trimmed whitespace and standardized case.
-•	Date Fields: Ensured consistent formatting using Excel date format tools.
+  - Price Formatting: Removed $ and ,, converted to float.
+  - Text Fields: Trimmed whitespace and standardized case.
+  - Date Fields: Ensured consistent formatting using Excel date format tools.
 
 - **Step 5: Outlier Detection**
   - Method: Mean and Standard Deviation
