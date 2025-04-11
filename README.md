@@ -17,3 +17,58 @@ The dataset used is titled Airbnb_dataset.csv, which contains 48,895 entries acr
 - Data Source: - <a href="https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data">Data source</a>
 - Dataset used: - <a href="https://github.com/Conyegwara/OIBSIP-/blob/main/Airbnb_dataset.xlsx">Dataset</a>
 
+#### Tools Used
+
+- Microsoft Excel
+- Visual tools: Excel Box & Whisker Chart
+
+#### Step-by-Step Data Cleaning Process
+- **Step 1: Data Integrity Check**
+   - Inspection: Headers were reviewed for clarity and consistency.
+   - Filtering Enabled: Excel filters were applied to each column to review values individually.
+   - Freezing Panes: The top row was frozen for easy navigation.
+   - Data validation: created a dropdown list for columns like host name, neighborhood group, neighborhood and room type(Data tab - click Data Validation - Under Allow, 
+     choose List- In the Source box choose a range in the cell.
+   - Used conditional formatting to highlight inconsistencies: Select your data range → Home → Conditional Formatting → highlight duplicates, blank cells, etc.
+
+- **Step 2: Handling Missing Data**
+  - Name and host_name:	Fill with previous entry: $=IF(A2="", A1, A2)$ — then drag down.
+  - last_review	Filled with a placeholder date (1900-01-01)
+  - reviews_per_month	Filled with 0
+
+- **Step 3: Duplicate Removal**
+  - Duplicates feature was used across key identifying fields.(Entire dataset was selected - Data - remove duplicate)
+  - Duplicate rows were eliminated to maintain data uniqueness.
+
+- **Step 4: Standardization**
+•	Price Formatting: Removed $ and ,, converted to float.
+•	Text Fields: Trimmed whitespace and standardized case.
+•	Date Fields: Ensured consistent formatting using Excel date format tools.
+
+- **Step 5: Outlier Detection**
+  - Method: Mean and Standard Deviation
+    Used the formula: $=IF(ABS(A2 - AVERAGE(A:A)) > 2 * STDEV.P(A:A), "Outlier", "OK")$
+  - Columns Processed:
+     - minimum_nights
+     - reviews_per_month
+     - Price
+  - Steps for Each Column:
+    - Calculate the mean and standard deviation using: =AVERAGE(range) and =STDEV.P(range).
+    - Used a helper column to flag outliers.
+    - Applied conditional formatting for visual distinction
+  - Alternative Method (Visual): Box & Whisker Plot
+    - Used Excel’s built-in Box & Whisker Chart for price, minimum_nights and reviews_per_month to visualize outliers.
+    - Outliers appeared as individual points outside the whiskers.
+
+##### Cleaned Dataset Output
+- Exported As Airbnb_Cleaned_Dataset xlsx
+- Added columns:
+  - Price_Outlier
+  - Min_nights_outlier
+  - Reviews_Outlier
+
+### Conclusion
+This project ensured that the Airbnb dataset is clean, consistent, and ready for further analysis or modeling. Outliers were systematically detected and flagged for review, and the data structure now adheres to analysis-ready standards.
+
+
+
