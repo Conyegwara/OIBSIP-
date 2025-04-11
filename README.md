@@ -13,6 +13,5 @@ This project focuses on cleaning and preparing an Airbnb dataset for accurate an
 5.	Detect and flag potential outliers for critical numerical variables.
 
 #### Data Source and cleaning
-The dataset used is titled Airbnb_dataset.csv, which contains 48,895 entries across 16 columns representing Airbnb listings
+- Data Source: New York City Airbnb Open Dataset https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data
 
-Data source: Kaggle retail sales dataset
